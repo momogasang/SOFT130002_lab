@@ -1,0 +1,45 @@
+body{
+    font-family: "Apple LiSung";
+    font-size: 15px;
+    color: darkblue;
+    padding: 10px;
+}
+header nav{5
+    position: relative;
+    z-index: 100;
+    min-width: 1032px;
+    background-clip: border-box;
+    -webkit-box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    box-shadow: 0 1px 3px rgba(225,100,255,1);
+
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: middle;
+}
+.div-right{
+    position: absolute;
+    right: 10%;
+    top: 12px;
+}
+.title{
+    font-size: 25px;
+}
+.functions{
+    list-style-type: georgian;
+    right: 10%;
+    position: absolute;
+
+}
+.functions li{
+    padding-bottom: 50px;
+    font-size: x-large;
+}
+section{
+    width: 75%;
+    background-clip: padding-box;
+    background-color: rgba(255,200,180,0.2);
+
+}
