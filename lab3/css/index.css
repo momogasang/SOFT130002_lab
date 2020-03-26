@@ -4,7 +4,7 @@ body{
     color: darkblue;
     padding: 10px;
 }
-header nav{5
+header nav{
     position: relative;
     z-index: 100;
     min-width: 1032px;
