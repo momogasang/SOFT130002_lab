@@ -189,7 +189,7 @@ function testSpecialReverse(str) {
         arr[j] = arrayObj[i];
         j++;
     }
-    // console.log(arr);
+    console.log(arr);
     //输出
     console.log(arr.join(" "));
 }
@@ -281,7 +281,7 @@ PoorCountry.prototype.saySad = function () {
 };
 var poorCountry = new PoorCountry();
 //Object.create
-let DevelopedCountry = Object.create(new Country());
+var DevelopedCountry = Object.create(new Country());
 DevelopedCountry.sayHappy = function () {
     console.log("I am a Happy developed country.")
 };
