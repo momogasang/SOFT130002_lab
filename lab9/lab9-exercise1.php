@@ -10,8 +10,14 @@
 <?php
 //this is a php comment IN tags (will not appear)
 echo "This was output using PHP";
-$remaining = 365 - date("z");
-echo "There are ". $remaining . " days left in the year";
+if (date("L") == 1) {
+//    闰年
+    $remaining = 366 - date("z");
+    echo "There are " . $remaining . " days left in the year" . "<hr/>";
+} else{
+    $remaining = 365 - date("z");
+    echo "There are " . $remaining . " days left in the year" . "<hr/>";
+}
 //notice we must echo tags in php.
 ?>
 </body>
