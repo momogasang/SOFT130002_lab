@@ -52,31 +52,31 @@ function getLoginForm()
     <div class="jumbotron">
         <h1>
             <?php
-	    require_once('config.php');
+	    session_start();
+            require_once('config.php');
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (validLogin()) {
-                    // add 1 day to the current time for expiry time
-                    $expiryTime = time() + 60 * 60 * 24;
-                    setcookie("Username", $_POST['username'], $expiryTime);
+                    $_SESSION['Username']=$_POST['username'];
                     header("Location: " . $_SERVER['HTTP_REFERER']);
                 } else {
                     echo "login unsuccessful";
                 }
             }
-            if (isset($_COOKIE['Username'])) {
-                echo "Welcome " . $_COOKIE['Username'];
+            if (isset($_SESSION['Username'])) {
+                echo "Welcome " . $_SESSION['Username'];
             } else {
                 echo "No Post detected";
-            }            ?>
+            }
+           ?>
 
         </h1>
     </div>
     <?php
-   if (!isset($_COOKIE['Username'])) {
+   if (!isset($_SESSION['Username'])) {
         echo getLoginForm();
     } else {
         echo "This is some content";
-        echo "<br><a href='logout1.php'>Log out</a>";
+        echo "<br><a href='logout2.php'>Log out</a>";
     }
     ?>
 </div>
